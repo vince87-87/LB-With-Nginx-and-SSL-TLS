@@ -70,5 +70,19 @@ web2
 
 # Register new domain & configure ssl/tls certificate
 
+#register a domain at godaddy 
+
+domain: mycloudslab.com
+
+Assign a Elastic ip and associate to nginx server
+
+Create A record on godaddy and point it to nginx server public ip
+
+browse to http://mycloudslab.com , you should able to see tooling website
+
+![image](https://user-images.githubusercontent.com/49937302/119362144-fbe85100-bcde-11eb-9452-06c93d0f39a8.png)
+
+# Install certbot & request ssl/tls certificate
+
 
 
