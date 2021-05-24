@@ -76,13 +76,19 @@ domain: mycloudslab.com
 
 Assign a Elastic ip and associate to nginx server
 
+![image](https://user-images.githubusercontent.com/49937302/119416817-11816900-bd27-11eb-97cd-0f9d5644156e.png)
+
 Create A record on godaddy and point it to nginx server public ip
+
+![image](https://user-images.githubusercontent.com/49937302/119417550-9f118880-bd28-11eb-8f5e-59dbec9ec8a2.png)
 
 browse to http://mycloudslab.com , you should able to see tooling website
 
 ![image](https://user-images.githubusercontent.com/49937302/119362144-fbe85100-bcde-11eb-9452-06c93d0f39a8.png)
 
 # Install certbot & request ssl/tls certificate
+
+Install certbot and request for an SSL/TLS certificate
 
 
 
