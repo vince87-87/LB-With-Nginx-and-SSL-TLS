@@ -80,15 +80,38 @@ Assign a Elastic ip and associate to nginx server
 
 Create A record on godaddy and point it to nginx server public ip
 
-![image](https://user-images.githubusercontent.com/49937302/119417550-9f118880-bd28-11eb-8f5e-59dbec9ec8a2.png)
+![image](https://user-images.githubusercontent.com/49937302/119420999-447c2a80-bd30-11eb-9a63-e06a599e8160.png)
 
-browse to http://mycloudslab.com , you should able to see tooling website
+browse to http://toolings.mycloudslab.com , you should able to see tooling website
 
-![image](https://user-images.githubusercontent.com/49937302/119362144-fbe85100-bcde-11eb-9452-06c93d0f39a8.png)
+![image](https://user-images.githubusercontent.com/49937302/119420988-3b8b5900-bd30-11eb-8ee7-85fb784f8a29.png)
 
 # Install certbot & request ssl/tls certificate
 
 Install certbot and request for an SSL/TLS certificate
 
+#update nginx configuration 
 
+sudo vi /etc/nginx/nginx.conf
+sudo systemctl restart nginx
+
+![image](https://user-images.githubusercontent.com/49937302/119421122-92912e00-bd30-11eb-834e-8c8ca17d0a3b.png)
+
+#install certbot
+
+sudo snap install --classic certbot
+
+#Ensure certbot can be run
+
+sudo ln -s /snap/bin/certbot /usr/bin/certbot
+
+#have Certbot edit your Nginx configuration automatically to serve it, turning on HTTPS access in a single step.
+
+sudo certbot --nginx
+
+![image](https://user-images.githubusercontent.com/49937302/119420894-fe26cb80-bd2f-11eb-82c1-939f2e1fe543.png)
+
+Verify https://toolings.mycloudslab.com & https is accessible with ssl cert
+
+![image](https://user-images.githubusercontent.com/49937302/119422126-ebfa5c80-bd32-11eb-8ba9-c4c7a3f407f0.png)
 
