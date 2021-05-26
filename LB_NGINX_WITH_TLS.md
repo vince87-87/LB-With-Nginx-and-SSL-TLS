@@ -115,3 +115,24 @@ Verify https://toolings.mycloudslab.com & https is accessible with ssl cert
 
 ![image](https://user-images.githubusercontent.com/49937302/119422126-ebfa5c80-bd32-11eb-8ba9-c4c7a3f407f0.png)
 
+#Test automatic renewal
+
+sudo certbot renew --dry-run
+
+![image](https://user-images.githubusercontent.com/49937302/119581257-c9307c80-bdf4-11eb-8785-cd0f747f8f18.png)
+
+#Configure Cron job to automatically renew cert @ 1207am everyday
+
+crontab -e
+
+Add following line:
+
+07 00  */1 * *   root /usr/bin/certbot renew > /dev/null 2>&1
+
+![image](https://user-images.githubusercontent.com/49937302/119583627-9341c700-bdf9-11eb-8c63-6f6921b82b9a.png)
+
+#verify cron is running
+
+![image](https://user-images.githubusercontent.com/49937302/119583719-c421fc00-bdf9-11eb-9c08-dfe3337ba9ec.png)
+
+
